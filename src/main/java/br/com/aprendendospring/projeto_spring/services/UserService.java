@@ -1,5 +1,6 @@
 package br.com.aprendendospring.projeto_spring.services;
 
+import br.com.aprendendospring.projeto_spring.DAO.UserDAO;
 import br.com.aprendendospring.projeto_spring.Infra.UserNotFoundException;
 import br.com.aprendendospring.projeto_spring.domain.user.UserModel;
 import br.com.aprendendospring.projeto_spring.repository.UserRepository;
@@ -27,7 +28,8 @@ public class UserService {
         }
     }
 
-    public UserModel salvar(UserModel userModel) {
+    public UserModel salvar(UserDAO userDAO) {
+        UserModel userModel = new UserModel(userDAO);
         return repository.save(userModel);
     }
 

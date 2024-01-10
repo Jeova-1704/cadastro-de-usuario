@@ -1,7 +1,9 @@
 package br.com.aprendendospring.projeto_spring.controller;
 
+import br.com.aprendendospring.projeto_spring.DAO.UserDAO;
 import br.com.aprendendospring.projeto_spring.domain.user.UserModel;
 import br.com.aprendendospring.projeto_spring.services.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,9 +32,9 @@ public class UserController {
     }
 
     @PostMapping("/salvar")
-    public ResponseEntity<UserModel> salvar(@RequestBody UserModel userModel){
-        UserModel user = service.salvar(userModel);
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(user.getId()).toUri();
+    public ResponseEntity<UserModel> salvar(@RequestBody @Valid UserDAO userDAO){
+        UserModel user = service.salvar(userDAO);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(user.getCpf()).toUri();
         return ResponseEntity.created(uri).body(user);
     }
 
