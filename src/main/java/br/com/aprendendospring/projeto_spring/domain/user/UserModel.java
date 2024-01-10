@@ -1,11 +1,14 @@
 package br.com.aprendendospring.projeto_spring.domain.user;
 
-import br.com.aprendendospring.projeto_spring.DTO.UserDTO;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.io.Serial;
+import java.io.Serializable;
 
 @Entity
 @AllArgsConstructor
@@ -13,15 +16,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @SequenceGenerator(name = "seq_usuario", sequenceName = "seq_usuario", allocationSize = 1, initialValue = 1)
-public class UserModel {
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+public class UserModel implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_usuario")
     private Long id;
     private String nome;
     private Integer idade;
-
-    public UserModel(UserDTO userDTO) {
-        this.nome = userDTO.nome();
-        this.idade = userDTO.idade();
-    }
 }

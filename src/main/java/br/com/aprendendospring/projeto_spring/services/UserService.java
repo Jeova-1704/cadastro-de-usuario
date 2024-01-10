@@ -1,10 +1,10 @@
 package br.com.aprendendospring.projeto_spring.services;
 
-import br.com.aprendendospring.projeto_spring.DTO.UserDTO;
 import br.com.aprendendospring.projeto_spring.Infra.UserNotFoundException;
 import br.com.aprendendospring.projeto_spring.domain.user.UserModel;
 import br.com.aprendendospring.projeto_spring.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 public class UserService {
 
+    @Autowired
     private UserRepository repository;
 
     public List<UserModel> listarTodos() {
@@ -26,9 +27,8 @@ public class UserService {
         }
     }
 
-    public UserModel salvar(UserDTO userDTO) {
-        UserModel user = new UserModel(userDTO);
-        return repository.save(user);
+    public UserModel salvar(UserModel userModel) {
+        return repository.save(userModel);
     }
 
 
