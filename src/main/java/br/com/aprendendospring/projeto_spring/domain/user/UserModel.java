@@ -2,8 +2,8 @@ package br.com.aprendendospring.projeto_spring.domain.user;
 
 import br.com.aprendendospring.projeto_spring.DAO.UserDAO;
 import br.com.aprendendospring.projeto_spring.domain.user.enums.GeneroEnum;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.NivelEscolaridade;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.StatusRelacionamento;
+import br.com.aprendendospring.projeto_spring.domain.user.enums.NivelEscolaridadeEnum;
+import br.com.aprendendospring.projeto_spring.domain.user.enums.StatusRelacionamentoEnum;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
@@ -19,7 +19,6 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "usuario")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -32,6 +31,9 @@ public class UserModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     @CPF
     private String cpf;
 
@@ -52,10 +54,10 @@ public class UserModel implements Serializable {
     private String profissao;
 
     @Enumerated(EnumType.STRING)
-    private NivelEscolaridade nivelEscolaridade;
+    private NivelEscolaridadeEnum nivelEscolaridade;
 
     @Enumerated(EnumType.STRING)
-    private StatusRelacionamento statusRelacionamento;
+    private StatusRelacionamentoEnum statusRelacionamento;
 
     public UserModel(UserDAO userDAO) {
         this.cpf = userDAO.cpf();

@@ -3,18 +3,21 @@ package br.com.aprendendospring.projeto_spring.services;
 import br.com.aprendendospring.projeto_spring.DAO.UserDAO;
 import br.com.aprendendospring.projeto_spring.Infra.UserNotFoundException;
 import br.com.aprendendospring.projeto_spring.domain.user.UserModel;
+import br.com.aprendendospring.projeto_spring.domain.user.enums.GeneroEnum;
+import br.com.aprendendospring.projeto_spring.domain.user.enums.NivelEscolaridadeEnum;
+import br.com.aprendendospring.projeto_spring.domain.user.enums.StatusRelacionamentoEnum;
 import br.com.aprendendospring.projeto_spring.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
-    @Autowired
-    private UserRepository repository;
+    private final UserRepository repository;
 
     public List<UserModel> listarTodos() {
         return repository.findAll();
@@ -33,17 +36,40 @@ public class UserService {
         return repository.save(userModel);
     }
 
-
-    public String deletarPorId(Long id) {
+    public String deletarPorId(UserModel user) {
         try {
-            repository.deleteById(id);
+            repository.deleteById(user.getId());
             return "Usuario deletado com sucesso";
         } catch (EntityNotFoundException e) {
-            throw new UserNotFoundException(id);
+            throw new UserNotFoundException(user.getCpf());
         }
     }
 
-    public List<UserModel> buscarPorNome(String nome) {
-        return repository.buscarPorNome(nome.trim().toUpperCase());
+    public List<UserModel> buscarNome(String nome) {
+        return repository.procurarNome(nome.trim().toUpperCase());
+    }
+
+    public List<UserModel> buscarCPF(String cpf) {
+        return repository.procurarCPF(cpf);
+    }
+
+    public List<UserModel> buscarEscolaridade(NivelEscolaridadeEnum nivelEscolaridade) {
+        return repository.procurarNivelEscolaridade(nivelEscolaridade);
+    }
+
+    public List<UserModel> buscarRelacionamento(StatusRelacionamentoEnum statusRelacionamento) {
+        return repository.procurarRelacionamenot(statusRelacionamento);
+    }
+
+    public List<UserModel> buscarGenero(GeneroEnum genero) {
+        return repository.procurarGenero(genero);
+    }
+
+    public List<UserModel> buscarIdade(Integer idade) {
+        return repository.procurarIdade(idade);
+    }
+
+    public UserModel update(UserModel usuario) {
+        return repository.saveAndFlush(usuario);
     }
 }

@@ -1,8 +1,8 @@
 package br.com.aprendendospring.projeto_spring.DAO;
 
 import br.com.aprendendospring.projeto_spring.domain.user.enums.GeneroEnum;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.NivelEscolaridade;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.StatusRelacionamento;
+import br.com.aprendendospring.projeto_spring.domain.user.enums.NivelEscolaridadeEnum;
+import br.com.aprendendospring.projeto_spring.domain.user.enums.StatusRelacionamentoEnum;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.br.CPF;
@@ -40,8 +40,8 @@ public record UserDAO(
         @NotBlank
         String profissao,
         @NotNull
-        NivelEscolaridade nivelEscolaridade,
+        NivelEscolaridadeEnum nivelEscolaridade,
         @NotNull
-        StatusRelacionamento statusRelacionamento
+        StatusRelacionamentoEnum statusRelacionamento
 ) {
 }

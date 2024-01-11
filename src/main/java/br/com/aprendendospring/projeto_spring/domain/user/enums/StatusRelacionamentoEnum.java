@@ -3,7 +3,7 @@ package br.com.aprendendospring.projeto_spring.domain.user.enums;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum StatusRelacionamento {
+public enum StatusRelacionamentoEnum {
     SOLTEIRO("Solteiro"),
     CASADO("Casado"),
     NOIVO("Noivo"),
@@ -13,7 +13,7 @@ public enum StatusRelacionamento {
 
     private final String descricao;
 
-    StatusRelacionamento(String descricao) {
+    StatusRelacionamentoEnum(String descricao) {
         this.descricao = descricao;
     }
 
@@ -22,8 +22,8 @@ public enum StatusRelacionamento {
     }
 
     @JsonCreator
-    public static StatusRelacionamento fromDescricao(String descricao) {
-        for (StatusRelacionamento status : StatusRelacionamento.values()) {
+    public static StatusRelacionamentoEnum fromDescricao(String descricao) {
+        for (StatusRelacionamentoEnum status : StatusRelacionamentoEnum.values()) {
             if (status.descricao.equals(descricao)) {
                 return status;
             }

@@ -3,7 +3,7 @@ package br.com.aprendendospring.projeto_spring.domain.user.enums;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum NivelEscolaridade {
+public enum NivelEscolaridadeEnum {
     ENSINO_FUNDAMENTAL_INCOMPLETO("Ensino Fundamental Incompleto"),
     ENSINO_FUNDAMENTAL_COMPLETO("Ensino Fundamental Completo"),
     ENSINO_MEDIO_INCOMPLETO("Ensino Médio Incompleto"),
@@ -13,7 +13,7 @@ public enum NivelEscolaridade {
 
     private final String descricao;
 
-    NivelEscolaridade(String descricao) {
+    NivelEscolaridadeEnum(String descricao) {
         this.descricao = descricao;
     }
 
@@ -22,8 +22,8 @@ public enum NivelEscolaridade {
     }
 
     @JsonCreator
-    public static NivelEscolaridade fromDescricao(String descricao) {
-        for (NivelEscolaridade nivel : NivelEscolaridade.values()) {
+    public static NivelEscolaridadeEnum fromDescricao(String descricao) {
+        for (NivelEscolaridadeEnum nivel : NivelEscolaridadeEnum.values()) {
             if (nivel.descricao.equals(descricao)) {
                 return nivel;
             }
