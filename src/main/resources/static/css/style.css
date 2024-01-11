@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #4e5f9e;
+}
+.divPai {
+    width: 510px;
+    height: 650px;
+    background-color: rgb(28, 36, 61);
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.titulo_principal {
+    color: white;
+    background-color: rgb(49, 120, 182);
+    position: absolute;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin: 0;
+    border-radius: 10px;
+    margin-left: 140px;
+}
+.divfilha {
+    width: 440px;
+    height: 580px;
+    padding: 20px;
+    margin: 15px;
+    border: 3px solid rgb(11, 148, 216);
+}
+
+#formcadastrodoUser {
+    background-color: black;
+    width: 300px;
+    height: 200px;
+}
+
+.form-label {
+    color: white;
+}
+
+.modal-content {
+    background-color: #7685ae;
+}
+
+.botoes {
+    margin-top: 50px;
+    text-align: center;
+}
