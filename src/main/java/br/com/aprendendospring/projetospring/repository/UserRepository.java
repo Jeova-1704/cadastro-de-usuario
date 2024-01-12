@@ -1,9 +1,9 @@
-package br.com.aprendendospring.projeto_spring.repository;
+package br.com.aprendendospring.projetospring.repository;
 
-import br.com.aprendendospring.projeto_spring.domain.user.UserModel;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.GeneroEnum;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.NivelEscolaridadeEnum;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.StatusRelacionamentoEnum;
+import br.com.aprendendospring.projetospring.domain.user.UserModel;
+import br.com.aprendendospring.projetospring.domain.user.enums.GeneroEnum;
+import br.com.aprendendospring.projetospring.domain.user.enums.NivelEscolaridadeEnum;
+import br.com.aprendendospring.projetospring.domain.user.enums.StatusRelacionamentoEnum;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

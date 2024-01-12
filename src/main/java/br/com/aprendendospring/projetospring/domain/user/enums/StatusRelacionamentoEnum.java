@@ -1,4 +1,4 @@
-package br.com.aprendendospring.projeto_spring.domain.user.enums;
+package br.com.aprendendospring.projetospring.domain.user.enums;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;

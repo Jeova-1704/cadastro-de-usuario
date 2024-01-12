@@ -20,7 +20,7 @@
         <form action="" id="formcadastroUser">
             <div class="mb-3">
                 <label for="id" class="form-label">CPF</label>
-                <input type="number" class="form-control" placeholder="Informe seu CPF" id="id" readonly="readonly">
+                <input type="text" class="form-control" placeholder="Informe seu CPF" id="id" required="required">
             </div>
     
             <div class="mb-3">
@@ -33,14 +33,59 @@
                 <input type="number" class="form-control" placeholder="Informe sua idade" id="idade">
             </div>
             <div class="mb-3">
-                <label for="dataNascimento" class="form-label">data de nascimento</label>
-                <input type="date" class="form-control"  id="dataNascimento">
-            </div>
-            <div class="mb-3">
                 <label for="email" class="form-label">E-mail</label>
                 <input type="email" class="form-control" placeholder="E-mail" id="email">
             </div>
-            
+            <div class="mb-3">
+                <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+                <input type="date" class="form-control"  id="dataNascimento">
+            </div>
+            <div class="mb-3">
+                <label for="genero" class="form-label">Gênero</label>
+                <select class="form-control" id="genero" name="genero">
+                    <option value="" selected disabled>Selecione o gênero</option>
+                    <option value="MASCULINO">Masculino</option>
+                    <option value="FEMININO">Feminino</option>
+                    <option value="NAO_BINARIO">Não Binário</option>
+                    <option value="OUTRO">Outro</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="text" class="form-control" placeholder="Telefone" id="telefone">
+            </div>
+            <div class="mb-3">
+                <label for="endereco" class="form-label">Endereco</label>
+                <input type="text" class="form-control" placeholder="Endereco" id="endereco">
+            </div>
+            <div class="mb-3">
+                <label for="profissao" class="form-label">Profissao</label>
+                <input type="text" class="form-control" placeholder="Profissao" id="profissao">
+            </div>
+            <div class="mb-3">
+                <label for="nivelEscolaridade" class="form-label">Nível de Escolaridade</label>
+                <select class="form-control" id="nivelEscolaridade" name="nivelEscolaridade">
+                    <option value="" selected disabled>Selecione o nível de escolaridade</option>
+                    <option value="ENSINO_FUNDAMENTAL_INCOMPLETO">Ensino Fundamental Incompleto</option>
+                    <option value="ENSINO_FUNDAMENTAL_COMPLETO">Ensino Fundamental Completo</option>
+                    <option value="ENSINO_MEDIO_INCOMPLETO">Ensino Médio Incompleto</option>
+                    <option value="ENSINO_MEDIO_COMPLETO">Ensino Médio Completo</option>
+                    <option value="SUPERIOR_INCOMPLETO">Superior Incompleto</option>
+                    <option value="SUPERIOR_COMPLETO">Superior Completo</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="statusRelacionamento" class="form-label">Status de Relacionamento</label>
+                <select class="form-control" id="statusRelacionamento" name="statusRelacionamento">
+                    <option value="" selected disabled>Selecione o status de relacionamento</option>
+                    <option value="SOLTEIRO">Solteiro</option>
+                    <option value="CASADO">Casado</option>
+                    <option value="NOIVO">Noivo</option>
+                    <option value="RELACIONAMENTO_ABERTO">Relacionamento Aberto</option>
+                    <option value="DIVORCIADO">Divorciado</option>
+                    <option value="VIUVO">Viúvo</option>
+                </select>
+            </div>
         </form>
         <div class="botoes">
             <button type="button" class="btn btn-primary" onclick="salvarUsuario()">Salvar</button>

@@ -1,8 +1,8 @@
-package br.com.aprendendospring.projeto_spring.controller;
+package br.com.aprendendospring.projetospring.controller;
 
-import br.com.aprendendospring.projeto_spring.DAO.UserDAO;
-import br.com.aprendendospring.projeto_spring.domain.user.UserModel;
-import br.com.aprendendospring.projeto_spring.services.UserService;
+import br.com.aprendendospring.projetospring.DAO.UserDAO;
+import br.com.aprendendospring.projetospring.domain.user.UserModel;
+import br.com.aprendendospring.projetospring.services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

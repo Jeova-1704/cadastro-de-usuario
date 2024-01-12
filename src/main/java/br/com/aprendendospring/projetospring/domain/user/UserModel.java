@@ -1,9 +1,9 @@
-package br.com.aprendendospring.projeto_spring.domain.user;
+package br.com.aprendendospring.projetospring.domain.user;
 
-import br.com.aprendendospring.projeto_spring.DAO.UserDAO;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.GeneroEnum;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.NivelEscolaridadeEnum;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.StatusRelacionamentoEnum;
+import br.com.aprendendospring.projetospring.DAO.UserDAO;
+import br.com.aprendendospring.projetospring.domain.user.enums.GeneroEnum;
+import br.com.aprendendospring.projetospring.domain.user.enums.NivelEscolaridadeEnum;
+import br.com.aprendendospring.projetospring.domain.user.enums.StatusRelacionamentoEnum;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

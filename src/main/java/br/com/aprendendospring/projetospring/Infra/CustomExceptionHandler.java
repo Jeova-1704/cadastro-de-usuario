@@ -1,4 +1,4 @@
-package br.com.aprendendospring.projeto_spring.Infra;
+package br.com.aprendendospring.projetospring.Infra;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;

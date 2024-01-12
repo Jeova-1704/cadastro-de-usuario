@@ -1,4 +1,4 @@
-package br.com.aprendendospring.projeto_spring.Infra;
+package br.com.aprendendospring.projetospring.Infra;
 
 import java.io.Serial;
 

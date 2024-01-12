@@ -73,6 +73,8 @@ function salvarUsuario() {
     var id = $("#id").val();
     var nome = $("#nome").val();
     var idade = $("#idade").val();
+    var dataNascimento = $("#dataNascimento").val();
+    alert(dataNascimento);
 
     if (nome == null || nome != null && nome.trim() == '') {
         $("#nome").focus();

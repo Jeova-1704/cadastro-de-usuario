@@ -1,12 +1,12 @@
-package br.com.aprendendospring.projeto_spring.services;
+package br.com.aprendendospring.projetospring.services;
 
-import br.com.aprendendospring.projeto_spring.DAO.UserDAO;
-import br.com.aprendendospring.projeto_spring.Infra.UserNotFoundException;
-import br.com.aprendendospring.projeto_spring.domain.user.UserModel;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.GeneroEnum;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.NivelEscolaridadeEnum;
-import br.com.aprendendospring.projeto_spring.domain.user.enums.StatusRelacionamentoEnum;
-import br.com.aprendendospring.projeto_spring.repository.UserRepository;
+import br.com.aprendendospring.projetospring.DAO.UserDAO;
+import br.com.aprendendospring.projetospring.Infra.UserNotFoundException;
+import br.com.aprendendospring.projetospring.domain.user.UserModel;
+import br.com.aprendendospring.projetospring.domain.user.enums.GeneroEnum;
+import br.com.aprendendospring.projetospring.domain.user.enums.NivelEscolaridadeEnum;
+import br.com.aprendendospring.projetospring.domain.user.enums.StatusRelacionamentoEnum;
+import br.com.aprendendospring.projetospring.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

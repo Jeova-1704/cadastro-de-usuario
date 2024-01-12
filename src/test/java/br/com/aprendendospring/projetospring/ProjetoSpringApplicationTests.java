@@ -1,4 +1,4 @@
-package br.com.aprendendospring.projeto_spring;
+package br.com.aprendendospring.projetospring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package br.com.aprendendospring.projeto_spring;
+package br.com.aprendendospring.projetospring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
