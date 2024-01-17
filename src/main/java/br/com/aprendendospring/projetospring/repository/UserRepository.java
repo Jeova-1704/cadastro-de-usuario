@@ -17,19 +17,4 @@ public interface UserRepository extends JpaRepository<UserModel, Long> {
     @Query("SELECT u FROM UserModel u WHERE UPPER(TRIM(u.nome)) LIKE %:nome%")
     List<UserModel> procurarNome(@Param("nome") String nome);
 
-    @Query("SELECT u FROM UserModel u WHERE u.cpf LIKE %:cpf%")
-    List<UserModel> procurarCPF(@Param("cpf") String cpf);
-
-    @Query("SELECT u FROM UserModel u WHERE u.genero = :genero")
-    List<UserModel> procurarGenero (@Param("genero") GeneroEnum genero);
-
-    @Query(value = "SELECT u FROM UserModel u WHERE u.idade = :idade")
-    List<UserModel> procurarIdade(Integer idade);
-
-    @Query("SELECT u FROM UserModel u WHERE u.genero = :statusRelacionamento")
-    List<UserModel> procurarRelacionamenot(StatusRelacionamentoEnum statusRelacionamento);
-
-    @Query("SELECT u FROM UserModel u WHERE u.nivelEscolaridade = :nivelEscolaridade")
-    List<UserModel> procurarNivelEscolaridade(NivelEscolaridadeEnum nivelEscolaridade);
-
 }

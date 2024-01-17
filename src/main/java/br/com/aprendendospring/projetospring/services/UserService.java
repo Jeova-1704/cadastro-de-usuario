@@ -49,26 +49,6 @@ public class UserService {
         return repository.procurarNome(nome.trim().toUpperCase());
     }
 
-    public List<UserModel> buscarCPF(String cpf) {
-        return repository.procurarCPF(cpf);
-    }
-
-    public List<UserModel> buscarEscolaridade(NivelEscolaridadeEnum nivelEscolaridade) {
-        return repository.procurarNivelEscolaridade(nivelEscolaridade);
-    }
-
-    public List<UserModel> buscarRelacionamento(StatusRelacionamentoEnum statusRelacionamento) {
-        return repository.procurarRelacionamenot(statusRelacionamento);
-    }
-
-    public List<UserModel> buscarGenero(GeneroEnum genero) {
-        return repository.procurarGenero(genero);
-    }
-
-    public List<UserModel> buscarIdade(Integer idade) {
-        return repository.procurarIdade(idade);
-    }
-
     public UserModel update(UserModel usuario) {
         return repository.saveAndFlush(usuario);
     }

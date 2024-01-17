@@ -10,7 +10,7 @@ body {
 }
 .divPai {
     width: 510px;
-    height: 1073px;
+    height: 1150px;
     background-color: rgb(28, 36, 61);
     padding: 20px;
     margin: auto;
@@ -32,7 +32,7 @@ body {
 }
 .divfilha {
     width: 440px;
-    height: 980px;
+    height: 1050px;
     padding: 20px;
     margin: 15px;
     border: 3px solid rgb(11, 148, 216);
@@ -53,6 +53,6 @@ body {
 }
 
 .botoes {
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
 }
